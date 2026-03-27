@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Oswald:wght@500;600;700;800;900&family=Caveat:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Oswald", sans-serif;
+  --font-marker: "Caveat", cursive;
+
+  --color-primary: #3b52d9;
+  --color-dark: #333333;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-zinc-900 font-sans overflow-x-hidden;
+  }
+}
+
+.text-outline-thin {
+  -webkit-text-stroke: 1.5px #92929c;
+  /* zinc-500 for more visibility */
+  color: transparent;
+}
+
+.text-outline-thick {
+  -webkit-text-stroke: 2px #18181b;
+  color: transparent;
+}
+
+.bg-text-shadow {
+  color: #f4f4f5;
+  z-index: -1;
+}
