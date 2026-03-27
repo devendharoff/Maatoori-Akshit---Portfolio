@@ -19,7 +19,7 @@ const VideoCard = ({ video, idx, isShort }: { video: any, idx: number, isShort?:
         const v = e.currentTarget.querySelector('video');
         if (v) {
           v.muted = false;
-          v.play().catch(() => {});
+          v.play().catch(() => { });
         }
       }}
       onMouseLeave={(e) => {
@@ -335,7 +335,7 @@ export default function App() {
 
                   <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="relative group">
                     <div className="absolute w-4 h-4 bg-zinc-300 rounded-full -left-[41px] top-1 ring-4 ring-zinc-50 group-hover:bg-primary group-hover:scale-125 transition-all duration-300 shadow-sm"></div>
-                    <span className="text-[11px] font-black tracking-widest uppercase text-white/80 group-hover:text-white transition-colors mb-2 block drop-shadow-md">2+ Years</span>
+                    <span className="text-[11px] font-black tracking-widest uppercase text-white/80 group-hover:text-white transition-colors mb-2 block drop-shadow-md">2025 jan - 2025 may</span>
                     <h6 className="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors drop-shadow-md">Video Editor Intern</h6>
                     <p className="text-sm font-bold text-white mb-4 drop-shadow-md">KANMA Media</p>
                     <ul className="text-sm text-white/90 space-y-2 font-medium list-disc pl-4 group-hover:text-white transition-colors drop-shadow-md">
