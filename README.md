@@ -1,6 +1,6 @@
 # 🎬 Maatoori Akshith | Cinematic Video Portfolio
 
-![Maatoori Akshith Portfolio Banner](public/hero-person.png)
+![Maatoori Akshith Portfolio Banner]
 
 A high-end, conversion-focused digital experience designed for a premium video editing and motion graphics showcase. This portfolio features a cinematic "studio" light aesthetic, interactive hover-to-play sound logic, and an editorial typography system.
 
