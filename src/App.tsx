@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Smartphone, MonitorPlay, Layers, Sparkles, Quote } from 'lucide-react';
+import { Smartphone, MonitorPlay, Layers, Sparkles, Quote, Instagram, Send, Twitter } from 'lucide-react';
 
 const VideoCard = ({ video, idx, isShort }: { video: any, idx: number, isShort?: boolean, key?: any }) => {
   const [isHovered, setIsHovered] = React.useState(false);
@@ -44,7 +44,7 @@ const VideoCard = ({ video, idx, isShort }: { video: any, idx: number, isShort?:
       <div className={`absolute inset-0 bg-primary/5 mix-blend-overlay pointer-events-none group-hover:bg-transparent transition-colors duration-700 z-10 ${isHovered ? 'hidden' : ''}`}></div>
       {isLocal ? (
         <video
-          className="absolute inset-0 w-full h-full object-cover relative z-0"
+          className={`absolute inset-0 w-full h-full ${isShort ? 'object-contain bg-black' : 'object-cover'} relative z-0`}
           src={`/${video.id}`}
           muted
           loop
@@ -97,6 +97,7 @@ export default function App() {
       short: [
         { id: "zMOcQpYH6QI", title: "High-Impact Short" },
         { id: "J7FkQhbWxwk", title: "Dynamic Visual Edit" },
+        { id: "my-short3.mp4", title: "Dynamic Visual Edit" },
       ],
       long: [
         { id: "YsiKbj7eoH0", title: "Cinematic Long-form Showcase" },
@@ -324,7 +325,7 @@ export default function App() {
                 <div className="space-y-12 border-l-2 border-zinc-100 ml-2 pl-8 relative">
                   <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative group">
                     <div className="absolute w-4 h-4 bg-primary rounded-full -left-[41px] top-1 ring-4 ring-zinc-50 group-hover:scale-125 transition-all duration-300 shadow-sm"></div>
-                    <span className="text-[11px] font-black tracking-widest uppercase text-white mb-2 block drop-shadow-md">Jan 2023 - Present</span>
+                    <span className="text-[11px] font-black tracking-widest uppercase text-white mb-2 block drop-shadow-md">1.5 years</span>
                     <h6 className="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors drop-shadow-md">Freelance Video Editor & Motion Graphics Designer</h6>
                     <p className="text-sm font-bold text-white mb-4 drop-shadow-md">Self-Employed</p>
                     <ul className="text-sm text-white/90 space-y-2 font-medium list-disc pl-4 group-hover:text-white transition-colors drop-shadow-md">
@@ -335,7 +336,7 @@ export default function App() {
 
                   <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="relative group">
                     <div className="absolute w-4 h-4 bg-zinc-300 rounded-full -left-[41px] top-1 ring-4 ring-zinc-50 group-hover:bg-primary group-hover:scale-125 transition-all duration-300 shadow-sm"></div>
-                    <span className="text-[11px] font-black tracking-widest uppercase text-white/80 group-hover:text-white transition-colors mb-2 block drop-shadow-md">2025 jan - 2025 may</span>
+                    <span className="text-[11px] font-black tracking-widest uppercase text-white/80 group-hover:text-white transition-colors mb-2 block drop-shadow-md">2026 jan - 2026 march</span>
                     <h6 className="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors drop-shadow-md">Video Editor Intern</h6>
                     <p className="text-sm font-bold text-white mb-4 drop-shadow-md">KANMA Media</p>
                     <ul className="text-sm text-white/90 space-y-2 font-medium list-disc pl-4 group-hover:text-white transition-colors drop-shadow-md">
@@ -459,8 +460,8 @@ export default function App() {
                 icon: <Smartphone className="w-8 h-8 text-primary" strokeWidth={1.5} />,
               },
               {
-                title: "After Effects",
-                desc: "Advanced VFX, seamless roto-brushing, compositing, tracking, and flawless post-production finishing.",
+                title: "Video Editing",
+                desc: "I provide high-quality video editing services for various platforms, including YouTube, Instagram, and TikTok.",
                 icon: <Sparkles className="w-8 h-8 text-primary" strokeWidth={1.5} />,
               },
             ].map((srv, idx) => (
@@ -843,6 +844,18 @@ export default function App() {
                 </div>
               </a>
 
+              {/* Social Icons Row */}
+              <div className="flex items-center justify-center lg:justify-end gap-6 pt-4">
+                <a href="https://www.instagram.com/aksshithhh/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-zinc-600 hover:text-pink-600 hover:bg-white transition-all duration-300 shadow-lg border border-white/40 hover:scale-110">
+                  <Instagram className="w-6 h-6" />
+                </a>
+                <a href="https://t.me/+918341072526" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-zinc-600 hover:text-blue-500 hover:bg-white transition-all duration-300 shadow-lg border border-white/40 hover:scale-110">
+                  <Send className="w-6 h-6 translate-x-[-1px] translate-y-[1px]" />
+                </a>
+                <a href="https://x.com/akshith_19" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-zinc-600 hover:text-dark hover:bg-white transition-all duration-300 shadow-lg border border-white/40 hover:scale-110">
+                  <Twitter className="w-6 h-6" />
+                </a>
+              </div>
             </motion.div>
           </div>
         </div>
