@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Smartphone, MonitorPlay, Layers, Sparkles, Quote, Instagram, Send, Twitter } from 'lucide-react';
+import { Smartphone, MonitorPlay, Layers, Sparkles, Quote, Instagram, Send, X } from 'lucide-react';
 
 const VideoCard = ({ video, idx, isShort }: { video: any, idx: number, isShort?: boolean, key?: any }) => {
   const [isHovered, setIsHovered] = React.useState(false);
@@ -849,11 +849,11 @@ export default function App() {
                 <a href="https://www.instagram.com/aksshithhh/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-zinc-600 hover:text-pink-600 hover:bg-white transition-all duration-300 shadow-lg border border-white/40 hover:scale-110">
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="https://t.me/+918341072526" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-zinc-600 hover:text-blue-500 hover:bg-white transition-all duration-300 shadow-lg border border-white/40 hover:scale-110">
+                <a href="https://t.me/IAMAKSHITH19" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-zinc-600 hover:text-blue-500 hover:bg-white transition-all duration-300 shadow-lg border border-white/40 hover:scale-110">
                   <Send className="w-6 h-6 translate-x-[-1px] translate-y-[1px]" />
                 </a>
-                <a href="https://x.com/akshith_19" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-zinc-600 hover:text-dark hover:bg-white transition-all duration-300 shadow-lg border border-white/40 hover:scale-110">
-                  <Twitter className="w-6 h-6" />
+                <a href="https://x.com/Akshith1904" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-md flex items-center justify-center text-zinc-600 hover:text-dark hover:bg-white transition-all duration-300 shadow-lg border border-white/40 hover:scale-110">
+                  <X className="w-6 h-6" />
                 </a>
               </div>
             </motion.div>
